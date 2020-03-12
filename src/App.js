@@ -1,11 +1,13 @@
+/* eslint-disable no-sparse-arrays */
 import {
   Box,
   Columns,
   Shapeshifter,
   Stack,
-  useBigDivEnergy,
+  useBigDivEnergy
 } from 'big-div-energy';
 import React from 'react';
+import styles from './App.module.css';
 
 function App() {
   const { stepIndex } = useBigDivEnergy();
@@ -14,29 +16,50 @@ function App() {
     <Box style={{ minHeight: '100vh' }}>
       <Box
         spacing={[['xs', 'sm']]}
+        className={styles.sendPromo}
         style={{
-          border: '1px solid #f0f0f4',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
+          fontSize: stepIndex < 1 && '.75rem'
         }}
       >
-        <div style={{ fontSize: stepIndex < 1 && '.75rem' }}>
-          There is a way to protect your privacy. Join Firefox.{' '}
-          <a href="http://www.mozilla.org/firefox/accounts/?utm_source=send.firefox.com&utm_medium=banner&utm_campaign=trailhead&utm_content=protect-your-privacy">
-            Learn more.
-          </a>
-        </div>
+        <Columns spacing={['xxs']}>
+          <img
+            src="https://send.firefox.com/master-logo.1a3d1a78.svg"
+            alt="Firefox"
+            style={{
+              height: '1.5rem',
+              width: '1.5rem',
+              marginTop: 'auto',
+              marginBottom: 'auto'
+            }}
+          />
+          <div>
+            There is a way to protect your privacy. Join Firefox.{' '}
+            <a href="http://www.mozilla.org/firefox/accounts/?utm_source=send.firefox.com&utm_medium=banner&utm_campaign=trailhead&utm_content=protect-your-privacy">
+              Learn more.
+            </a>
+          </div>
+        </Columns>
       </Box>
       <Box
+        type="header"
         spacing={[[, 'md']]}
         style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          position: 'relative',
+          height: '4rem',
+          width: '100%'
         }}
       >
-        <Box spacing={[['sm', 'none']]}>Firefox Send</Box>
+        <Box type="a" href="/">
+          <img
+            src="https://send.firefox.com/icon.fd04d81a.svg"
+            alt="Firefox Send"
+            style={{ height: '32px', width: 'auto' }}
+          />
+          <Box spacing={[['sm', 'none']]}>Firefox Send</Box>
+        </Box>
         <div>Sign in</div>
       </Box>
       <Box spacing={['md']}>
@@ -49,7 +72,7 @@ function App() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              justifyContent: 'center',
+              justifyContent: 'center'
             }}
           >
             <div>img</div>
