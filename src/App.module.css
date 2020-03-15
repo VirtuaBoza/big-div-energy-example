@@ -1,8 +1,58 @@
+.container {
+  min-height: 100vh;
+}
+
 .sendPromo {
   border: 1px solid #f0f0f4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #2a2a2e;
   line-height: 1.5;
+}
+
+.linkBlue {
+  color: #0060df;
+}
+
+.textGrey {
+  color: #4a4a4f;
+}
+
+.textXs {
+  font-size: 0.75rem;
+}
+
+.textSm {
+  font-size: 0.875rem;
+}
+
+.textLg {
+  font-size: 1.125rem;
+}
+
+.trackingWide {
+  letter-spacing: 0.05em;
+}
+
+.fontMedium {
+  font-weight: 500;
+}
+
+.fontBold {
+  font-weight: 700;
+}
+
+.leadingLoose {
+  line-height: 1.75;
+}
+
+.header {
+  position: relative;
+  height: 4rem;
+  width: 100%;
+  flex: none;
+  z-index: 20;
+}
+
+.sendUploadArea {
+  border: 2px dashed #d7d7db;
+  border-radius: 0.25rem;
 }

@@ -2,6 +2,7 @@ import { BigDivEnergyProvider } from 'big-div-energy';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import './fonts/Inter-Regular.woff2';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
@@ -15,9 +16,9 @@ ReactDOM.render(
         sm: '1rem',
         md: '1.5rem',
         lg: '3rem',
-        xl: '4rem',
+        xl: '4rem'
       },
-      breakpoints: [576, 768],
+      breakpoints: [576, 768]
     }}
   >
     <App />
